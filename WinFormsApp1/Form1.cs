@@ -44,7 +44,7 @@ namespace WinFormsApp1
 
         private void создатьТаблицуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            queryString = "CREATE TABLE [dbo].[Table_Clients] ([Id_Client]   BIGINT IDENTITY(1, 1) NOT NULL, " +
+            queryString = "CREATE TABLE [dbo].[Table_Clients] ([Id_Client] BIGINT IDENTITY(1, 1) NOT NULL, " +
                 "[Name]NVARCHAR(50) NULL," +
                 "[Surname] NVARCHAR(50) NULL," +
                 "[Lastname] NVARCHAR(50) NULL," +
