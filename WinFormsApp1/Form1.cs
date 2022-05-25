@@ -44,7 +44,9 @@ namespace WinFormsApp1
 
         private void создатьТаблицуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            queryString = "CREATE TABLE [dbo].[Table_Clients] ([Id_Client] BIGINT IDENTITY(1, 1) NOT NULL, " +
+            try
+            {
+                queryString = "CREATE TABLE [dbo].[Table_Clients] ([Id_Client] BIGINT IDENTITY(1, 1) NOT NULL, " +
                 "[Name]NVARCHAR(50) NULL," +
                 "[Surname] NVARCHAR(50) NULL," +
                 "[Lastname] NVARCHAR(50) NULL," +
@@ -52,25 +54,40 @@ namespace WinFormsApp1
                 "[Email] TEXT NULL, " +
                 "PRIMARY KEY CLUSTERED([Id_Client] ASC), " +
                 "UNIQUE NONCLUSTERED([Id_Client] ASC));";
-            servise.CreateCommand(queryString, connectionString);
+                servise.CreateCommand(queryString, connectionString);
 
-            queryString = "CREATE TABLE [dbo].[Table_Realtor] (" +
-                "[Id]    INT IDENTITY(1, 1) NOT NULL," +
-                "[Name]  NVARCHAR(50) NOT NULL," +
-                "[Surname]  NVARCHAR(50) NOT NULL," +
-                "[Lastname] NVARCHAR(50) NOT NULL," +
-                "[Ratio]    INT NULL," +
-                "PRIMARY KEY CLUSTERED([Id] ASC)," +
-                "UNIQUE NONCLUSTERED([Id] ASC));";
-            servise.CreateCommand(queryString, connectionString);
+                queryString = "CREATE TABLE [dbo].[Table_Realtor] (" +
+                    "[Id]    INT IDENTITY(1, 1) NOT NULL," +
+                    "[Name]  NVARCHAR(50) NOT NULL," +
+                    "[Surname]  NVARCHAR(50) NOT NULL," +
+                    "[Lastname] NVARCHAR(50) NOT NULL," +
+                    "[Ratio]    INT NULL," +
+                    "PRIMARY KEY CLUSTERED([Id] ASC)," +
+                    "UNIQUE NONCLUSTERED([Id] ASC));";
+                servise.CreateCommand(queryString, connectionString);
+            }
+            catch(Exception ex)
+            {
+                label4.Text = "";
+                label4.Text = "Таблицы уже существуют";
+            }
+            
         }
 
         private void удалитьТаблицуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            queryString = "DROP TABLE IF EXISTS [dbo].[Table_Clients];";
-            servise.CreateCommand(queryString, connectionString);
-            queryString = "DROP TABLE IF EXISTS [dbo].[Table_Realtor];";
-            servise.CreateCommand(queryString, connectionString);
+            try
+            {
+                queryString = "DROP TABLE IF EXISTS [dbo].[Table_Clients];";
+                servise.CreateCommand(queryString, connectionString);
+                queryString = "DROP TABLE IF EXISTS [dbo].[Table_Realtor];";
+                servise.CreateCommand(queryString, connectionString);
+            }
+            catch(Exception ex)
+            {
+                label4.Text = "";
+                label4.Text = "Сначала создайте таблицы! Таблицы отсутствуют!"; 
+            }
 
 
         }
