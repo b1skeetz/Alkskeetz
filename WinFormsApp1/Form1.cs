@@ -1,4 +1,5 @@
-using Microsoft.Data.SqlClient;
+using System.Data;
+using System.Data.SqlClient;
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
@@ -7,31 +8,28 @@ namespace WinFormsApp1
         {
             InitializeComponent();
 
-            //string connectionString = "Server=A1408\\SQLEXPRESS;Database=Database1;Trusted_Connection=yes;";
-
-            /*SqlConnection conn = new SqlConnection();
-            conn.ConnectionString =
-              "Server=A1408\\SQLEXPRESS;" +
-              "Database=Database1;" +
-              "User Id=POLYTECH2\\КадыржановД;" + 
-              "Password=\"\";";
-            conn.Open();*/
-
-            // Создание подключения
-            /*SqlConnection connection = new SqlConnection(connectionString);
+            string connectionString = "Data Source =(localdb)\\MSSQLLocalDB; DataBase = master;" +
+                " Integrated Security=True;";
+            SqlConnection connection = new SqlConnection(connectionString);
             try
             {
-                // Открываем подключение
+                // РћС‚РєСЂС‹РІР°РµРј РїРѕРґРєР»СЋС‡РµРЅРёРµ
                 connection.Open();
+                MessageBox.Show("РџРѕРґРєР»СЋС‡РµРЅРёРµ РѕС‚РєСЂС‹С‚Рѕ");
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
             finally
             {
-                connection.CloseAsync();
-            }*/
+                // РµСЃР»Рё РїРѕРґРєР»СЋС‡РµРЅРёРµ РѕС‚РєСЂС‹С‚Рѕ
+                if (connection.State == ConnectionState.Open)
+                {
+                    // Р·Р°РєСЂС‹РІР°РµРј РїРѕРґРєР»СЋС‡РµРЅРёРµ
+                    connection.Close();
+                }
+            }
         }
 
         private void button_login_Click(object sender, EventArgs e)

@@ -24,6 +24,7 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //сделай подтверждение (регистрация прошла успешно) и только потом закрытие приложения через 2 сек (2000мс) 
             firsName = textBox1.Text;
             name = textBox2.Text;
             lastName = textBox3.Text;
