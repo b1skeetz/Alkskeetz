@@ -32,15 +32,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void создатьТаблицуToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -73,6 +65,24 @@ namespace WinFormsApp1
             servise.CreateCommand(queryString, connectionString);
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                ClientInput form5 = new ClientInput();
+                this.Hide();
+                form5.Show();
+
+            }
+            if (radioButton2.Checked == true)
+            {
+                RealtorInput realtorInput = new RealtorInput();
+                this.Hide();
+                realtorInput.Show();
+
+            }
         }
     }
 

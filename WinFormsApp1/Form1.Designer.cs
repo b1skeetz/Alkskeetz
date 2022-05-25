@@ -133,14 +133,14 @@
             // создатьТаблицуToolStripMenuItem
             // 
             this.создатьТаблицуToolStripMenuItem.Name = "создатьТаблицуToolStripMenuItem";
-            this.создатьТаблицуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.создатьТаблицуToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.создатьТаблицуToolStripMenuItem.Text = "Создать таблицу";
             this.создатьТаблицуToolStripMenuItem.Click += new System.EventHandler(this.создатьТаблицуToolStripMenuItem_Click);
             // 
             // удалитьТаблицуToolStripMenuItem
             // 
             this.удалитьТаблицуToolStripMenuItem.Name = "удалитьТаблицуToolStripMenuItem";
-            this.удалитьТаблицуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.удалитьТаблицуToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.удалитьТаблицуToolStripMenuItem.Text = "Удалить таблицу";
             this.удалитьТаблицуToolStripMenuItem.Click += new System.EventHandler(this.удалитьТаблицуToolStripMenuItem_Click);
             // 
@@ -160,7 +160,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
