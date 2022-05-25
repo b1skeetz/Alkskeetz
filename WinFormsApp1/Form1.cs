@@ -8,28 +8,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
 
-            string connectionString = "Data Source =(localdb)\\MSSQLLocalDB; DataBase = master;" +
-                " Integrated Security=True;";
-            SqlConnection connection = new SqlConnection(connectionString);
-            try
-            {
-                // Открываем подключение
-                connection.Open();
-                MessageBox.Show("Подключение открыто");
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                // если подключение открыто
-                if (connection.State == ConnectionState.Open)
-                {
-                    // закрываем подключение
-                    connection.Close();
-                }
-            }
+            
         }
 
         private void button_login_Click(object sender, EventArgs e)

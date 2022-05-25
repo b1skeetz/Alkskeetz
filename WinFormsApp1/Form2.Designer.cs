@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_Surname = new System.Windows.Forms.TextBox();
+            this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.textBox_Lastname = new System.Windows.Forms.TextBox();
+            this.textBox_Phone = new System.Windows.Forms.TextBox();
+            this.textBox_Number = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,41 +53,41 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Добро пожаловать";
             // 
-            // textBox1
+            // textBox_Surname
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 23);
-            this.textBox1.TabIndex = 1;
+            this.textBox_Surname.Location = new System.Drawing.Point(182, 77);
+            this.textBox_Surname.Name = "textBox_Surname";
+            this.textBox_Surname.Size = new System.Drawing.Size(226, 23);
+            this.textBox_Surname.TabIndex = 1;
             // 
-            // textBox2
+            // textBox_Name
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 23);
-            this.textBox2.TabIndex = 2;
+            this.textBox_Name.Location = new System.Drawing.Point(182, 106);
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(226, 23);
+            this.textBox_Name.TabIndex = 2;
             // 
-            // textBox3
+            // textBox_Lastname
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 138);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 23);
-            this.textBox3.TabIndex = 3;
+            this.textBox_Lastname.Location = new System.Drawing.Point(182, 138);
+            this.textBox_Lastname.Name = "textBox_Lastname";
+            this.textBox_Lastname.Size = new System.Drawing.Size(226, 23);
+            this.textBox_Lastname.TabIndex = 3;
             // 
-            // textBox4
+            // textBox_Phone
             // 
-            this.textBox4.Location = new System.Drawing.Point(182, 203);
-            this.textBox4.MaxLength = 12;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 23);
-            this.textBox4.TabIndex = 4;
+            this.textBox_Phone.Location = new System.Drawing.Point(182, 203);
+            this.textBox_Phone.MaxLength = 12;
+            this.textBox_Phone.Name = "textBox_Phone";
+            this.textBox_Phone.Size = new System.Drawing.Size(226, 23);
+            this.textBox_Phone.TabIndex = 4;
             // 
-            // textBox5
+            // textBox_Number
             // 
-            this.textBox5.Location = new System.Drawing.Point(182, 236);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(226, 23);
-            this.textBox5.TabIndex = 5;
+            this.textBox_Number.Location = new System.Drawing.Point(182, 236);
+            this.textBox_Number.Name = "textBox_Number";
+            this.textBox_Number.Size = new System.Drawing.Size(226, 23);
+            this.textBox_Number.TabIndex = 5;
             // 
             // label2
             // 
@@ -174,11 +174,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Number);
+            this.Controls.Add(this.textBox_Phone);
+            this.Controls.Add(this.textBox_Lastname);
+            this.Controls.Add(this.textBox_Name);
+            this.Controls.Add(this.textBox_Surname);
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -191,11 +191,11 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox textBox_Surname;
+        private TextBox textBox_Name;
+        private TextBox textBox_Lastname;
+        private TextBox textBox_Phone;
+        private TextBox textBox_Number;
         private Label label2;
         private Label label3;
         private Label label4;
