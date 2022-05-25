@@ -39,6 +39,8 @@
             this.базаДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьТаблицуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьТаблицуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             // 
             // button_login
             // 
-            this.button_login.Location = new System.Drawing.Point(253, 210);
+            this.button_login.Location = new System.Drawing.Point(238, 187);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(131, 51);
             this.button_login.TabIndex = 16;
@@ -103,7 +105,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(48, 210);
+            this.button1.Location = new System.Drawing.Point(48, 187);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 51);
             this.button1.TabIndex = 20;
@@ -144,11 +146,31 @@
             this.удалитьТаблицуToolStripMenuItem.Text = "Удалить таблицу";
             this.удалитьТаблицуToolStripMenuItem.Click += new System.EventHandler(this.удалитьТаблицуToolStripMenuItem_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 260);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 15);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Статус:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(61, 261);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 15);
+            this.label4.TabIndex = 23;
+            this.label4.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 284);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -180,5 +202,7 @@
         private ToolStripMenuItem базаДанныхToolStripMenuItem;
         private ToolStripMenuItem создатьТаблицуToolStripMenuItem;
         private ToolStripMenuItem удалитьТаблицуToolStripMenuItem;
+        private Label label3;
+        private Label label4;
     }
 }
